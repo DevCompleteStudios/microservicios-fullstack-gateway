@@ -1,0 +1,11 @@
+
+
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: microservicios-usuarios
+        uri: lb://microservicios-usuarios
+        predicates:
+        - Path=/api/alumnos/**
+
