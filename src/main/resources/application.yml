@@ -10,3 +10,9 @@ spring:
         - Path=/api/alumnos/**
         filters:
         - StripPrefix=2
+      - id: microservicios-cursos
+        uri: lb://microservicios-cursos
+        predicates:
+        - Path=/api/cursos/**
+        filters:
+        - StripPrefix=2
