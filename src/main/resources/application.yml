@@ -8,4 +8,5 @@ spring:
         uri: lb://microservicios-usuarios
         predicates:
         - Path=/api/alumnos/**
-
+        filters:
+        - StripPrefix=2
